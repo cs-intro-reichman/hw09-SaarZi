@@ -141,8 +141,7 @@ public class List {
             if (current.cp.count == sum) {
                 current = current.next;
                 sum = 1;
-            }
-            {
+            } else {
                 sum++;
             }
         }

@@ -9,6 +9,21 @@
  * mention the existence of the Node objects).
  */
 public class List {
+    public static void main(String[] args) {
+        // List l = new List();
+        // l.addFirst(' ');
+        // l.addFirst('e');
+        // l.addFirst('e');
+        // l.addFirst('t');
+        // l.addFirst('t');
+        // l.addFirst('i');
+        // l.addFirst('m');
+        // l.addFirst('m');
+        // l.addFirst('o');
+        // l.addFirst('c');
+        // System.out.println(l);
+    }
+
     // Points to the first node in this list
     private Node first;
 
@@ -37,6 +52,10 @@ public class List {
      */
     public void addFirst(char chr) {
         // Your code goes here
+        if (first != null && first.cp.chr == chr) {
+            first.cp.count++;
+            return;
+        }
         Node added = new Node(new CharData(chr), first);
         first = added;
         size++;

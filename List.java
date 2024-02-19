@@ -10,20 +10,20 @@
  */
 public class List {
     public static void main(String[] args) {
-        List l = new List();
-        l.addFirst('d');
-        l.addFirst('l');
-        l.addFirst('r');
-        l.addFirst('o');
-        l.addFirst('w');
-        l.addFirst('_');
-        l.addFirst('o');
-        l.addFirst('l');
-        l.addFirst('l');
-        l.addFirst('e');
-        l.addFirst('h');
-        System.out.println(l);
-        System.out.println(l.indexOf('o'));
+        // List l = new List();
+        // l.addFirst('d');
+        // l.addFirst('l');
+        // l.addFirst('r');
+        // l.addFirst('o');
+        // l.addFirst('w');
+        // l.addFirst('_');
+        // l.addFirst('o');
+        // l.addFirst('l');
+        // l.addFirst('l');
+        // l.addFirst('e');
+        // l.addFirst('h');
+        // System.out.println(l);
+        // System.out.println(l.indexOf('o'));
     }
 
     // Points to the first node in this list

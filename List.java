@@ -10,12 +10,12 @@
  */
 public class List {
     public static void main(String[] args) {
-        List l = new List();
-        l.addFirst('d');
-        l.addFirst('r');
-        l.addFirst('o');
-        l.addFirst('w');
-        System.out.println(l);
+        // List l = new List();
+        // l.addFirst('d');
+        // l.addFirst('r');
+        // l.addFirst('o');
+        // l.addFirst('w');
+        // System.out.println(l);
     }
 
     // Points to the first node in this list

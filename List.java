@@ -66,13 +66,13 @@ public class List {
     /** GIVE Textual representation of this list. */
     public String toString() {
         // Your code goes here
-        String result = "";
+        String result = "(";
         Node current = first;
         while (current != null) {
             result += current.cp + " ";
             current = current.next;
         }
-        return result;
+        return result + ")";
     }
 
     /**

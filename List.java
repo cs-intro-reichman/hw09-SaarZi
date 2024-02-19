@@ -80,6 +80,7 @@ public class List {
      */
     public int indexOf(char chr) {
         // Your code goes here
+        System.out.println(toString());
         Node current = first;
         int index = 0;
         while (current != null) {

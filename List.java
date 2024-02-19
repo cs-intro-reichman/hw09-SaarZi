@@ -86,8 +86,8 @@ public class List {
             if (current.cp.chr == chr) {
                 return index;
             }
+            index += current.cp.count;
             current = current.next;
-            index++;
         }
         return -1; // Value not found
     }

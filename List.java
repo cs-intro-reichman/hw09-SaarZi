@@ -106,7 +106,6 @@ public class List {
      * true. Otherwise, returns false.
      */
     public boolean remove(char chr) {
-        /* TODO: */
         // Your code goes here
         if (indexOf(chr) == -1) {
             return false;
@@ -136,8 +135,16 @@ public class List {
             throw new IndexOutOfBoundsException(index);
         }
         Node current = first;
+
+        int sum = 1;
         for (int i = 0; i < index; i++) {
-            current = current.next;
+            if (current.cp.count == sum) {
+                current = current.next;
+                sum = 1;
+            }
+            {
+                sum++;
+            }
         }
         return current.cp;
     }

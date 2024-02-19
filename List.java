@@ -69,7 +69,7 @@ public class List {
         String result = "";
         Node current = first;
         while (current != null) {
-            result += current.cp;
+            result += current.cp + " ";
             current = current.next;
         }
         return result;

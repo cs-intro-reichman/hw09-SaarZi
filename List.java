@@ -52,13 +52,13 @@ public class List {
      */
     public void addFirst(char chr) {
         // Your code goes here
+        size++;
         if (first != null && first.cp.chr == chr) {
             first.cp.count++;
             return;
         }
         Node added = new Node(new CharData(chr), first);
         first = added;
-        size++;
     }
 
     /** GIVE Textual representation of this list. */

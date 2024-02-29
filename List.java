@@ -46,13 +46,9 @@ public class List {
      */
     public void addFirst(char chr) {
         // Your code goes here
-        size++;
-        if (first != null && first.cp.chr == chr) {
-            first.cp.count++;
-            return;
-        }
         Node added = new Node(new CharData(chr), first);
         first = added;
+        size++;
     }
 
     /** GIVE Textual representation of this list. */
@@ -77,10 +73,10 @@ public class List {
         Node current = first;
         int index = 0;
         while (current != null) {
-            if (current.cp.chr == chr) {
+            if (current.cp.equals(chr)) {
                 return index;
             }
-            index += current.cp.count;
+            index++;
             current = current.next;
         }
         return -1; // Value not found
@@ -115,11 +111,13 @@ public class List {
             first = first.next;
             return true;
         }
+        Node prev = null;
         Node current = first;
-        for (int i = 0; i < indexOf(chr) - 1; i++) {
+        for (int i = 0; i < indexOf(chr); i++) {
+            prev = current;
             current = current.next;
         }
-        current.next = current.next.next;
+        prev.next = current.next;
 
         return true;
     }
@@ -135,15 +133,8 @@ public class List {
             throw new IndexOutOfBoundsException(index);
         }
         Node current = first;
-
-        int sum = 1;
         for (int i = 0; i < index; i++) {
-            if (current.cp.count == sum) {
-                current = current.next;
-                sum = 1;
-            } else {
-                sum++;
-            }
+            current = current.next;
         }
         return current.cp;
     }

@@ -78,6 +78,7 @@ public class LanguageModel {
             total++;
             li.next();
         }
+        total = 16;
         li = probs.listIterator(0);
         double increment = 1. / total;
         double prob = 0.;

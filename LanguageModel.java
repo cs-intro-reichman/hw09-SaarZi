@@ -75,10 +75,9 @@ public class LanguageModel {
         int total = 0;
         ListIterator li = probs.listIterator(0);
         while (li.hasNext()) {
-            total++;
+            total += li.current.cp.count;
             li.next();
         }
-        System.out.println(total);
         li = probs.listIterator(0);
         double increment = 1. / total;
         double prob = 0.;

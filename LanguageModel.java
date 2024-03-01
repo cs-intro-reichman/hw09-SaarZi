@@ -121,7 +121,7 @@ public class LanguageModel {
         if (initialText.length() < windowLength) {
             return initialText;
         }
-        while (initialText.length() < textLength + 6) {
+        while (initialText.length() < textLength + windowLength) {
             List mapped = CharDataMap.get(initialText.substring(initialText.length() - windowLength));
             if (mapped == null) {
                 return initialText;

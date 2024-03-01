@@ -121,11 +121,11 @@ public class LanguageModel {
         if (initialText.length() < windowLength) {
             return initialText;
         }
-        while (initialText.length() < textLength) {
+        while (initialText.length() < textLength + 6) {
             List mapped = CharDataMap.get(initialText.substring(initialText.length() - windowLength));
-            // if (mapped == null) {
-            // return initialText;
-            // }
+            if (mapped == null) {
+                return initialText;
+            }
 
             initialText += getRandomChar(mapped);
         }
